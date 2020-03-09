@@ -11,7 +11,7 @@ const mongoose = require("mongoose");
 const User = require("./models/user");
 
 const MONGODB_URI =
-  // "mongodb+srv://<Username>:<Password>@cluster0-q3o0u.mongodb.net/shop?retryWrites=true&w=majority";
+  "mongodb+srv://<Username>:<Password>@cluster0-q3o0u.mongodb.net/shop?retryWrites=true&w=majority";
 
 const app = express();
 const store = new MongoDbStore({
@@ -58,19 +58,6 @@ app.use(errorController.get404);
 mongoose
   .connect(MONGODB_URI)
   .then(result => {
-    User.findOne().then(user => {
-      if (!user) {
-        const user = new User({
-          username: "John",
-          email: "john@mail.com",
-          cart: {
-            items: []
-          }
-        });
-        user.save();
-      }
-    });
-
     app.listen(3000);
   })
   .catch(err => {
