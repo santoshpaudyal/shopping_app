@@ -11,7 +11,7 @@ const mongoose = require("mongoose");
 const User = require("./models/user");
 
 const MONGODB_URI =
-  "mongodb+srv://<Username>:<Password>@cluster0-q3o0u.mongodb.net/shop?retryWrites=true&w=majority";
+  // "mongodb+srv://<Username>:<Password>@cluster0-q3o0u.mongodb.net/shop?retryWrites=true&w=majority";
 
 const app = express();
 const store = new MongoDbStore({
