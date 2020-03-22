@@ -2,3 +2,4 @@ package-lock.json
 util
 node_modules
 data
+.vscode
